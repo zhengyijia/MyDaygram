@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.oneplus.mydaygram.SettingPageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <View
+                android:id="@+id/setting_line1"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toEndOf="@id/setting_line1"
+                android:layout_toRightOf="@id/setting_line1"
+                android:gravity="center"
+                android:text="@string/setting_title1"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.oneplus.widget.MyTextView1
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/setting_text1"
+                android:layout_toRightOf="@id/setting_text1"
+                android:gravity="center"
+                android:text="@string/version"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/contact_us"
+                android:textColor="@color/unSelectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/left_bracket"
+                    android:textColor="@color/unSelectedColor"
+                    android:textSize="20sp"
+                    android:typeface="sans" />
+
+                <com.oneplus.widget.MyTextView1
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/unSelectedColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/blog"
+                    android:textColor="@color/unSelectedColor"
+                    android:textSize="20sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/right_bracket"
+                    android:textColor="@color/unSelectedColor"
+                    android:textSize="20sp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/setting_line2"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toEndOf="@id/setting_line2"
+                android:layout_toRightOf="@id/setting_line2"
+                android:gravity="center"
+                android:text="@string/setting_title2"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.oneplus.widget.MyTextView1
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/theme_title1"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/setting_line3"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toEndOf="@id/setting_line3"
+                android:layout_toRightOf="@id/setting_line3"
+                android:gravity="center"
+                android:text="@string/setting_title3"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_size5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/text_size5"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_size4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/font_size5"
+                android:layout_toStartOf="@id/font_size5"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/text_size4"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_size3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/font_size4"
+                android:layout_toStartOf="@id/font_size4"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/text_size3"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_size2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/font_size3"
+                android:layout_toStartOf="@id/font_size3"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/text_size2"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_size1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/font_size2"
+                android:layout_toStartOf="@id/font_size2"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/text_size1"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/setting_line4"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toEndOf="@id/setting_line4"
+                android:layout_toRightOf="@id/setting_line4"
+                android:gravity="center"
+                android:text="@string/setting_title4"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_switch_on"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/on"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/font_switch_off"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/font_switch_on"
+                android:layout_toStartOf="@id/font_switch_on"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/off"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/setting_line5"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_toEndOf="@id/setting_line5"
+                android:layout_toRightOf="@id/setting_line5"
+                android:gravity="center"
+                android:text="@string/setting_title5"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <RelativeLayout
+                android:id="@+id/preview_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/preview_button2_line"
+                        android:layout_width="2dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="18dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/preview_button2_line"
+                        android:layout_toRightOf="@id/preview_button2_line"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/colorBackground" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorBackground" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/preview_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/preview_2"
+                android:layout_toStartOf="@id/preview_2"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/preview_button1_line"
+                        android:layout_width="2dp"
+                        android:layout_height="6dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="18dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/preview_button1_line"
+                        android:layout_toRightOf="@id/preview_button1_line"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorBackground" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <View
+                android:id="@+id/setting_line6"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/selectedColor" />
+
+            <TextView
+                android:id="@+id/setting_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_toEndOf="@id/setting_line6"
+                android:layout_toRightOf="@id/setting_line6"
+                android:gravity="center"
+                android:text="@string/setting_title6"
+                android:textColor="@color/selectedColor"
+                android:textSize="20sp"
+                android:typeface="sans" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/password_on"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/on"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/password_off"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/password_on"
+                android:layout_toStartOf="@id/password_on"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/off"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/password_reset"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:layout_toLeftOf="@id/password_off"
+                android:layout_toStartOf="@id/password_off"
+                android:background="@drawable/circle_border_light_gray"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <View
+                        android:id="@+id/arrow_line1"
+                        android:layout_width="14dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/round_rectangle_light_gray" />
+
+                    <View
+                        android:id="@+id/arrow_line2"
+                        android:layout_width="14dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/arrow_line1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/round_rectangle_light_gray" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@id/arrow_line1"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginStart="14dp"
+                        android:background="@drawable/round_rectangle_light_gray"
+                        android:rotation="45" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@id/arrow_line1"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginStart="14dp"
+                        android:background="@drawable/round_rectangle_light_gray"
+                        android:rotation="-45" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@id/arrow_line2"
+                        android:background="@drawable/round_rectangle_light_gray"
+                        android:rotation="-45" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@id/arrow_line2"
+                        android:background="@drawable/round_rectangle_light_gray"
+                        android:rotation="45" />
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorBackground" />
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginStart="18dp"
+                        android:background="@color/colorBackground" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/backup_button"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/rectangle_border_dark"
+            android:gravity="center"
+            android:text="@string/backup"
+            android:textColor="@color/selectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/restore_button"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/backup_button"
+            android:layout_toStartOf="@id/backup_button"
+            android:background="@drawable/rectangle_border_dark"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.oneplus.widget.MyTextView1
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/restore"
+                    android:textColor="@color/colorRed"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.oneplus.widget.MyTextView1
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/dropbox"
+                    android:textColor="@color/selectedColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/selectedColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/copyright"
+            android:textColor="@color/superLightGray"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/setting_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="9dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/rectangle_border" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

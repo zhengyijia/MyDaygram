@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Oneplus on 2016/9/16.
  */
-public class DiaryItem implements Serializable {
+public class DiaryItem implements Serializable{
     private int year;//年份
     private int month;//月份
     private int day;//日期
@@ -35,11 +35,12 @@ public class DiaryItem implements Serializable {
         this.day = day;
     }
 
-    public String setDiaryContent(){
+    public String getDiaryContent(){
         return this.diaryContent;
     }
 
     public void setDiaryContent(String diaryContent){
         this.diaryContent = diaryContent;
     }
+
 }

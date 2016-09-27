@@ -11,17 +11,23 @@ import android.widget.TextView;
 public class MyTextView1 extends TextView{
     public MyTextView1(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
+        if(!isInEditMode()) {
+            init();
+        }
     }
 
     public MyTextView1(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        if(!isInEditMode()) {
+            init();
+        }
     }
 
     public MyTextView1(Context context) {
         super(context);
-        init();
+        if(!isInEditMode()) {
+            init();
+        }
     }
 
     private void init() {

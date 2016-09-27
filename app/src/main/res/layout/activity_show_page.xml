@@ -3,125 +3,178 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:orientation="vertical"
-    android:background="@color/colorBackground"
     tools:context="com.oneplus.mydaygram.ShowPageActivity">
 
-    <ListView
+    <com.oneplus.widget.BounceListView
         android:id="@+id/diary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="43">
+        android:layout_weight="1"
+        android:divider="@null"
+        android:fastScrollEnabled="false"
+        android:listSelector="@drawable/list_selector"
+        android:scrollbars="none">
 
-    </ListView>
+    </com.oneplus.widget.BounceListView>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5">
+        android:layout_height="60dp">
 
-        <TextView
+        <View
             android:id="@+id/myLine1"
             android:layout_width="5dp"
             android:layout_height="14dp"
-            android:background="@color/colorGray"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:background="@color/colorGray" />
 
         <com.oneplus.widget.MyTextView1
             android:id="@+id/month"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/myLine1"
             android:layout_toRightOf="@id/myLine1"
-            android:textSize="20sp"
+            android:gravity="center"
+            android:text="@string/example_text"
             android:textColor="@color/colorGray"
-            android:textStyle="bold"
-            android:text="SEPTEMBER"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <TextView
+        <View
             android:id="@+id/myLine2"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="14dp"
-            android:background="@color/colorGray"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/month"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/month"
+            android:layout_toRightOf="@id/month"
+            android:background="@color/colorGray" />
 
         <com.oneplus.widget.MyTextView1
             android:id="@+id/year"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/myLine2"
             android:layout_toRightOf="@id/myLine2"
-            android:textSize="20sp"
+            android:gravity="center"
+            android:text="@string/example_text"
             android:textColor="@color/colorGray"
-            android:textStyle="bold"
-            android:text="2016"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <TextView
+        <View
             android:id="@+id/myLine3"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="14dp"
-            android:background="@color/colorGray"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/year"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
-        
-        <TextView
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/year"
+            android:layout_toRightOf="@id/year"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
             android:id="@+id/setting_button"
-            android:layout_width="24dp"
-            android:layout_height="14dp"
-            android:background="@drawable/rectangle_border"
-            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="9dp"
+                android:background="@drawable/rectangle_border" />
+
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/reformat_button"
             android:layout_width="60dp"
-            android:layout_height="10dp"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             android:layout_toLeftOf="@id/setting_button"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            >
-            <TextView
+            android:layout_toStartOf="@id/setting_button"
+            android:gravity="center">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_alignParentTop="true"
-                android:background="@color/colorGray"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                android:layout_centerInParent="true"
-                android:background="@color/colorGray" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorGray"/>
+                android:layout_height="12dp"
+                android:layout_centerVertical="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorGray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorGray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorGray" />
+
+            </RelativeLayout>
         </RelativeLayout>
 
-        <TextView
+        <View
             android:id="@+id/myLine4"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="14dp"
-            android:background="@color/colorGray"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
             android:layout_toLeftOf="@id/reformat_button"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_toStartOf="@id/reformat_button"
+            android:background="@color/colorGray" />
+
+        <RelativeLayout
+            android:id="@+id/plus"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <View
+                android:id="@+id/plus_line1"
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_rectangle" />
+
+            <View
+                android:id="@+id/plus_line2"
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_rectangle"
+                android:rotation="90" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

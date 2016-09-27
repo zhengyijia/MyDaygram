@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackground">#F2F1ED</color>
-    <color name="colorGray">#51514D</color>
+    <color name="colorGray">#504F4B</color>
     <color name="transparent">#00000000</color>
+    <color name="colorRed">#A84545</color>
+    <color name="unSelectedColor">#A6A6A2</color>
+    <color name="selectedColor">#343433</color>
+    <color name="superLightGray">#BAB7A9</color>
+    <color name="passwordUnInput">#D9D7D0</color>
+    <color name="passwordInput">#AAA697</color>
 </resources>

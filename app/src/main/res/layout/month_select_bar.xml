@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/month_select_whole_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:overScrollMode="always"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Jan_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Jan_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Feb_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Feb_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Mar_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Mar_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Apr_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Apr_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/May_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/May_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Jun_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Jun_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Jul_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Jul_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Aug_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Aug_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Sep_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Sep_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Oct_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Oct_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Nov_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Nov_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.oneplus.widget.MyTextView1
+                android:id="@+id/Dec_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_light_gray"
+                android:gravity="center"
+                android:text="@string/Dec_text"
+                android:textColor="@color/colorBackground"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

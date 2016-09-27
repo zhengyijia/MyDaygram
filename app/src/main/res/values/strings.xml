@@ -2,4 +2,54 @@
     <string name="app_name">MyDaygram</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="buffer_path">myDaygramBuff</string>
+    <string name="done_button_text">DONE</string>
+    <string name="example_text">Example</string>
+    <string name="time_title">/%1$s %2$d/%3$d</string>
+    <string name="day_in_month">%1$d</string>
+    <string name="dialog_text">是否删除 %1$d-%2$s-%3$s 的日记？</string>
+    <string name="dialog_select_text1">取消</string>
+    <string name="dialog_select_text2">确认</string>
+    <string name="Jan_text">JAN</string>
+    <string name="Feb_text">FEB</string>
+    <string name="Mar_text">MAR</string>
+    <string name="Apr_text">APR</string>
+    <string name="May_text">MAY</string>
+    <string name="Jun_text">JUN</string>
+    <string name="Jul_text">JUL</string>
+    <string name="Aug_text">AUG</string>
+    <string name="Sep_text">SEP</string>
+    <string name="Oct_text">OCT</string>
+    <string name="Nov_text">NOV</string>
+    <string name="Dec_text">DEC</string>
+    <string name="setting_title1">版本</string>
+    <string name="setting_title2">主题</string>
+    <string name="setting_title3">字体大小</string>
+    <string name="setting_title4">使用系统字体</string>
+    <string name="setting_title5">预览方式</string>
+    <string name="setting_title6">密码设置</string>
+    <string name="version">1.0.0</string>
+    <string name="contact_us">[联系我们][应用评分]</string>
+    <string name="blog">官方微博</string>
+    <string name="left_bracket">[</string>
+    <string name="right_bracket">]</string>
+    <string name="theme_title1">DEFAULT</string>
+    <string name="text_size1">1</string>
+    <string name="text_size2">2</string>
+    <string name="text_size3">3</string>
+    <string name="text_size4">4</string>
+    <string name="text_size5">5</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="copyright">Copyright © 2015 SaltyCrackers</string>
+    <string name="restore">RESTORE FROM</string>
+    <string name="dropbox">DROPBOX</string>
+    <string name="backup">BACKUP TO DROPBOX</string>
+    <string name="wrong_password">密码错误</string>
+    <string name="new_password">请输入新密码</string>
+    <string name="new_password_again">请再次输入新密码</string>
+    <string name="old_password">请输入旧密码</string>
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
 </resources>

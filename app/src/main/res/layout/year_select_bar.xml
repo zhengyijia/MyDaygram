@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/year_select_whole_page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/first_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/second_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/third_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/fourth_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/fifth_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.oneplus.widget.MyTextView1
+            android:id="@+id/sixth_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:textColor="@color/unSelectedColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
