@@ -103,7 +103,6 @@ public class InputPasswordPage extends AppCompatActivity {
                                     v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.circle_red));
                                 }
                                 wrongPasswordAlert.setVisibility(View.VISIBLE);
-                                passwordInput.setInputType(InputType.TYPE_NULL);
                                 MyTimer timer = new MyTimer();
                                 timer.start();//启动线程
                             }
@@ -233,7 +232,6 @@ public class InputPasswordPage extends AppCompatActivity {
                 case 1:
                     wrongPasswordAlert.setVisibility(View.GONE);
                     passwordInput.setText("");
-                    passwordInput.setInputType(InputType.TYPE_CLASS_NUMBER);
                     break;
                 default:
                     break;
@@ -250,7 +248,7 @@ public class InputPasswordPage extends AppCompatActivity {
         public void run() {
             // TODO Auto-generated method stub
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
                 mHandler.sendEmptyMessage(1);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
