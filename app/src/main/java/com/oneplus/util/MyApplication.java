@@ -62,10 +62,6 @@ public class MyApplication extends Application {
         super.onTerminate();
         //取消注册
         this.unregisterReceiver(mScreenActionReceiver);
-        SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
-        editor.putBoolean("lockSetting", lockSetting);
-        editor.putString("password", password);
-        editor.apply();
     }
 
     public class ScreenActionReceiver extends BroadcastReceiver {
