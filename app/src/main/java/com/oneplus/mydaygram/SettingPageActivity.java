@@ -62,9 +62,11 @@ public class SettingPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(application.getLockSetting()) {
-                    application.setLockSetting(false);
+                    application.setClickOff(true);
                     passwordOff.setBackground(ContextCompat.getDrawable(SettingPageActivity.this, R.drawable.circle_dark));
                     passwordOn.setBackground(ContextCompat.getDrawable(SettingPageActivity.this, R.drawable.circle_light_gray));
+                    Intent intent = new Intent(SettingPageActivity.this, InputPasswordPage.class);
+                    startActivity(intent);
                 }
             }
         });

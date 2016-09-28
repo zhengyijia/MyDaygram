@@ -68,7 +68,117 @@ public class InputPasswordPage extends AppCompatActivity {
 
         passwordInput = (EditText) findViewById(R.id.password_input);
         if (application.getLockSetting()) {
-            if (application.getIsLocked()) {
+            if(!application.getClickOff()) {
+                if (application.getIsLocked()) {
+                    passwordInput.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                        }
+
+                        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+                        @Override
+                        public void afterTextChanged(Editable s) {
+                            charNum = passwordInput.getText().toString().length();
+                            if (0 <= charNum && charNum <= 3) {
+                                int num = 0;
+                                for (View v : passwordCircles) {
+                                    num++;
+                                    if (num <= charNum)
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
+                                    else
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_uninput_circle));
+                                }
+                            }
+                            if (charNum > 3) {
+                                if (application.getPassword().equals(passwordInput.getText().toString())) {
+                                    for (View v : passwordCircles)
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
+                                    application.setIsLocked(false);
+                                    finish();
+                                } else {
+                                    for (View v : passwordCircles) {
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.circle_red));
+                                    }
+                                    wrongPasswordAlert.setVisibility(View.VISIBLE);
+                                    MyTimer timer = new MyTimer();
+                                    timer.start();//启动线程
+                                }
+
+                            }
+                        }
+                    });
+                } else {
+                    oldPasswordAlert.setVisibility(View.VISIBLE);
+                    passwordInput.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                        }
+
+                        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+                        @Override
+                        public void afterTextChanged(Editable s) {
+                            charNum = passwordInput.getText().toString().length();
+
+                            if (0 <= charNum && charNum <= 3) {
+                                int num = 0;
+                                for (View v : passwordCircles) {
+                                    num++;
+                                    if (num <= charNum)
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
+                                    else
+                                        v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_uninput_circle));
+                                }
+                            }
+                            if (charNum > 3) {
+                                if (!inputOld) {
+                                    if (application.getPassword().equals(passwordInput.getText().toString())) {
+                                        inputOld = true;
+                                        oldPasswordAlert.setVisibility(View.GONE);
+                                        newPasswordAlert.setVisibility(View.VISIBLE);
+                                        passwordInput.setText("");
+                                    } else {
+                                        passwordInput.setText("");
+                                    }
+                                } else {
+                                    if (!inputFinish) {
+                                        tempPassword = passwordInput.getText().toString();
+                                        inputFinish = true;
+                                        newPasswordAlert.setVisibility(View.GONE);
+                                        newPasswordAgainAlert.setVisibility(View.VISIBLE);
+                                        passwordInput.setText("");
+                                    } else {
+                                        if (tempPassword.equals(passwordInput.getText().toString())) {
+                                            for (View v : passwordCircles)
+                                                v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
+                                            application.setPassword(tempPassword);
+                                            application.setLockSetting(true);
+                                            finish();
+                                        } else {
+                                            inputFinish = false;
+                                            passwordInput.setText("");
+                                            newPasswordAgainAlert.setVisibility(View.GONE);
+                                            newPasswordAlert.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }else{
+                application.setClickOff(false);
                 passwordInput.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -96,7 +206,10 @@ public class InputPasswordPage extends AppCompatActivity {
                         }
                         if (charNum > 3) {
                             if (application.getPassword().equals(passwordInput.getText().toString())) {
+                                for (View v : passwordCircles)
+                                    v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
                                 application.setIsLocked(false);
+                                application.setLockSetting(false);
                                 finish();
                             } else {
                                 for (View v : passwordCircles) {
@@ -107,67 +220,6 @@ public class InputPasswordPage extends AppCompatActivity {
                                 timer.start();//启动线程
                             }
 
-                        }
-                    }
-                });
-            } else {
-                oldPasswordAlert.setVisibility(View.VISIBLE);
-                passwordInput.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                    }
-
-                    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-                    @Override
-                    public void afterTextChanged(Editable s) {
-                        charNum = passwordInput.getText().toString().length();
-
-                        if (0 <= charNum && charNum <= 3) {
-                            int num = 0;
-                            for (View v : passwordCircles) {
-                                num++;
-                                if (num <= charNum)
-                                    v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
-                                else
-                                    v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_uninput_circle));
-                            }
-                        }
-                        if (charNum > 3) {
-                            if(!inputOld) {
-                                if (application.getPassword().equals(passwordInput.getText().toString())) {
-                                    inputOld = true;
-                                    oldPasswordAlert.setVisibility(View.GONE);
-                                    newPasswordAlert.setVisibility(View.VISIBLE);
-                                    passwordInput.setText("");
-                                } else {
-                                    passwordInput.setText("");
-                                }
-                            }else{
-                                if (!inputFinish) {
-                                    tempPassword = passwordInput.getText().toString();
-                                    inputFinish = true;
-                                    newPasswordAlert.setVisibility(View.GONE);
-                                    newPasswordAgainAlert.setVisibility(View.VISIBLE);
-                                    passwordInput.setText("");
-                                } else {
-                                    if (tempPassword.equals(passwordInput.getText().toString())) {
-                                        application.setPassword(tempPassword);
-                                        application.setLockSetting(true);
-                                        finish();
-                                    } else {
-                                        inputFinish = false;
-                                        passwordInput.setText("");
-                                        newPasswordAgainAlert.setVisibility(View.GONE);
-                                        newPasswordAlert.setVisibility(View.VISIBLE);
-                                    }
-                                }
-                            }
                         }
                     }
                 });
@@ -207,6 +259,8 @@ public class InputPasswordPage extends AppCompatActivity {
                             passwordInput.setText("");
                         } else {
                             if (tempPassword.equals(passwordInput.getText().toString())) {
+                                for (View v : passwordCircles)
+                                    v.setBackground(ContextCompat.getDrawable(InputPasswordPage.this, R.drawable.password_input_circle));
                                 application.setPassword(tempPassword);
                                 application.setLockSetting(true);
                                 finish();

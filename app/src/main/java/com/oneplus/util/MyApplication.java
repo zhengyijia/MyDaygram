@@ -13,6 +13,7 @@ import android.os.Handler;
  */
 public class MyApplication extends Application {
 
+    private boolean clickOff = false;
     private boolean lockSetting;
     private boolean isLocked = false;
     private String password;
@@ -35,6 +36,8 @@ public class MyApplication extends Application {
         password = pref.getString("password", "");
     }
 
+    public boolean getClickOff(){ return clickOff; }
+    public void setClickOff(boolean clickOff){ this.clickOff = clickOff; }
     public boolean getLockSetting(){ return lockSetting; }
     public void setLockSetting(boolean lockSetting){
         this.lockSetting = lockSetting;
