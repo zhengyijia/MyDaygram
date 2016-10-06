@@ -15,7 +15,7 @@ public class MyApplication extends Application {
 
     private boolean clickOff = false;
     private boolean lockSetting;
-    private boolean isLocked = false;
+    private boolean isLocked = true;
     private String password;
 
     ScreenActionReceiver mScreenActionReceiver;
@@ -38,7 +38,11 @@ public class MyApplication extends Application {
 
     public boolean getClickOff(){ return clickOff; }
     public void setClickOff(boolean clickOff){ this.clickOff = clickOff; }
-    public boolean getLockSetting(){ return lockSetting; }
+    public boolean getLockSetting(){
+        SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
+        lockSetting = pref.getBoolean("lockSetting", false);
+        return lockSetting;
+    }
     public void setLockSetting(boolean lockSetting){
         this.lockSetting = lockSetting;
         SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
@@ -48,6 +52,8 @@ public class MyApplication extends Application {
     public boolean getIsLocked(){ return isLocked; }
     public void setIsLocked(boolean isLocked){ this.isLocked = isLocked; }
     public String getPassword() {
+        SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
+        password = pref.getString("password", "");
         return password;
     }
     public void setPassword(String password) {
